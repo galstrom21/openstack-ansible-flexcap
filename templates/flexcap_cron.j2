@@ -1,0 +1,10 @@
+DATEVAR=date +%F_%T
+WORKDIR={{ flexcap_dir }}
+CLOG={{ flexcap_log_dir }}/Collect.log
+PLOG={{ flexcap_log_dir }}/Process.log
+
+# Run the collector every hour, at 5 minutes past the hour
+5 * * * * root echo "----- $($DATEVAR) -----" >> $CLOG && cd $WORKDIR && ./Collect.sh >> $CLOG
+
+# Run the collector at 00:15 every day
+15 0 * * * root echo "----- $($DATEVAR) -----" >> $PLOG && cd $WORKDIR && ./Process.sh >> $PLOG
