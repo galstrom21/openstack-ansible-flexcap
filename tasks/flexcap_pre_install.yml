@@ -41,7 +41,7 @@
   template:
     src: "hpe_fc_properties.j2"
     dest: "{{ flexcap_dir }}/hpe_fc_properties"
-    mode: "0744"
+    mode: "0644"
 
 - name: Apply flexcap cron.d template
   template:

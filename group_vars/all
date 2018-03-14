@@ -23,10 +23,13 @@ flexcap_package_url: "https://86652185d5e27eec77c2-d6083977023677fbaba3753f29adf
 
 openrc_dir: "/root"
 
-collect_nova: False
-collect_swift: False
-collect_ceph: False
+# Boolean option, but only accepts lowercase (true|false)
+collect_nova: false
+collect_swift: false
+collect_ceph: false
 
+# These entries can contain only Alphanumeric characters and dashes
+# NO underscores
 account_number: ""
 account_name: ""
 cluster_name: ""
