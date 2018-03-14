@@ -27,10 +27,9 @@
 
 - name: Install distro packages
   package:
-    name: "{{ item }}"
+    name: "{{ flexcap_distro_packages }}"
     state: latest
     update_cache: yes
-    with_items: "{{ flexcap_distro_packages }}"
 
 - name: Download flexcap collectors
   unarchive:
@@ -39,19 +38,19 @@
     remote_src: yes
 
 - name: Apply hpe_fc_properties template
-  config_template:
+  template:
     src: "hpe_fc_properties.j2"
     dest: "{{ flexcap_dir }}/hpe_fc_properties"
     mode: "0744"
 
 - name: Apply flexcap cron.d template
-  config_template:
+  template:
     src: "flexcap_cron.j2"
     dest: "/etc/cron.d/flexcap"
     mode: "0755"
 
 - name: Apply flexcap logrotate.d template
-  config_template:
+  template:
     src: "flexcap_logrotate.j2"
     dest: "/etc/logrotate.d/flexcap"
     mode: "0755"

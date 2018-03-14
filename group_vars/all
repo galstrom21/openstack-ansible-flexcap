@@ -14,12 +14,26 @@
 # limitations under the License.
 
 flexcap_dir: "/opt/Flexcap"
-
 flexcap_log_dir: "/var/log/flexcap"
 
 flexcap_distro_packages:
   - openjdk-8-jdk-headless
-  - unzip
-  - dos2unix
 
-flexcap_package_url: "https://file.ac/d4M_LPHBR10/Deliverables.zip"
+flexcap_package_url: "https://86652185d5e27eec77c2-d6083977023677fbaba3753f29adfbed.ssl.cf2.rackcdn.com/flexcap.tgz"
+
+openrc_dir: "/root"
+
+collect_nova: False
+collect_swift: False
+collect_ceph: False
+
+account_number: ""
+account_name: ""
+cluster_name: ""
+
+flexcap_email_to_address: "fcs_processing@hpe.com"
+flexcap_email_from_address: "rpcflexcap@gmail.com"
+flexcap_email_username: ""
+flexcap_email_password: ""
+flexcap_email_host: "smtp.gmail.com"
+flexcap_email_port: "587"

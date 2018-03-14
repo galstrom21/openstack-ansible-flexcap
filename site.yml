@@ -1,0 +1,4 @@
+---
+- hosts: localhost
+    tasks:
+          - include_tasks: tasks/flexcap_pre_install.yml
